@@ -1,7 +1,18 @@
 import { NavLink } from "react-router-dom";
 import logo from "../src/assets/museum-logo.png";
+import { useState } from "react";
 
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="bg-white shadow-lg fixed w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,6 +58,7 @@ function Navbar() {
             <button
               type="button"
               className="block text-gray-600 hover:text-blue-500 focus:text-blue-500 focus:outline-none"
+              onClick={toggleMenu}
             >
               <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
                 <path
@@ -64,36 +76,41 @@ function Navbar() {
           </div>
         </div>
         {/* Mobile Navigation Menu */}
-        <div className="md:hidden">
-          <div className="pt-2 pb-3 space-y-1">
-            <NavLink
-              exact
-              to="/"
-              className="block pl-3 pr-4 py-2 border-l-4 text-base font-medium text-gray-600 bg-gray-50 border-gray-200"
-            >
-              Home
-            </NavLink>
-            <NavLink
-              to="/collections"
-              className="block pl-3 pr-4 py-2 border-l-4 text-base font-medium text-gray-600 hover:bg-gray-50 hover:text-blue-500"
-            >
-              Collections
-            </NavLink>
-
-            <NavLink
-              to="/exhibits"
-              className="block pl-3 pr-4 py-2 border-l-4 text-base font-medium text-gray-600 hover:bg-gray-50 hover:text-blue-500"
-            >
-              Exhibits
-            </NavLink>
-            <NavLink
-              to="/aboutus"
-              className="block pl-3 pr-4 py-2 border-l-4 text-base font-medium text-gray-600 hover:bg-gray-50 hover:text-blue-500"
-            >
-              About Us
-            </NavLink>
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div className="pt-2 pb-3 space-y-1">
+              <NavLink
+                exact
+                to="/"
+                className="block pl-3 pr-4 py-2 border-l-4 text-base font-medium text-gray-600 bg-gray-50 border-gray-200"
+                onClick={closeMenu}
+              >
+                Home
+              </NavLink>
+              <NavLink
+                to="/collections"
+                className="block pl-3 pr-4 py-2 border-l-4 text-base font-medium text-gray-600 hover:bg-gray-50 hover:text-blue-500"
+                onClick={closeMenu}
+              >
+                Collections
+              </NavLink>
+              <NavLink
+                to="/exhibits"
+                className="block pl-3 pr-4 py-2 border-l-4 text-base font-medium text-gray-600 hover:bg-gray-50 hover:text-blue-500"
+                onClick={closeMenu}
+              >
+                Exhibits
+              </NavLink>
+              <NavLink
+                to="/aboutus"
+                className="block pl-3 pr-4 py-2 border-l-4 text-base font-medium text-gray-600 hover:bg-gray-50 hover:text-blue-500"
+                onClick={closeMenu}
+              >
+                About Us
+              </NavLink>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </nav>
   );

@@ -9,7 +9,7 @@ function HomePage() {
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="mt-2 text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              The Museum
+              The Online Museum
             </h1>
             <p className="mt-1 text-xl text-gray-600">
               Explore our vast collections and exhibits.

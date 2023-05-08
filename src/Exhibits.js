@@ -4,6 +4,7 @@ import exhibitionImage from "./assets/exhibition.jpg";
 const Exhibits = () => {
   const [countdown, setCountdown] = useState(null);
 
+  // useEffect here
   useEffect(() => {
     // Set the exhibition date to be two weeks from the current date
     const exhibitionDate = new Date();
@@ -45,8 +46,8 @@ const Exhibits = () => {
           years.
         </p>
 
-        <div className="flex -mt-5 gap-12 justify-center">
-          <div className="mt-8 flex">
+        <div className="flex flex-col lg:flex-row mt-4 gap-12 justify-center items-center">
+          <div className="lg:w-1/2">
             <img
               src="https://s.hdnux.com/photos/53/27/34/11368233/4/1200x0.jpg"
               alt="Upcoming Exhibition"
@@ -54,21 +55,21 @@ const Exhibits = () => {
             />
           </div>
 
-          <div class="flex mt-2 flex-col justify-between items-center">
-            <div>
-              <p class="flex mt-4 text-xl text-gray-600">
+          <div className="flex flex-col lg:w-1/2 justify-between items-center mt-8 lg:mt-0">
+            <div className="text-center lg:text-left">
+              <p className="mt-4 text-xl text-gray-600">
                 Don't miss our virtual exhibition:
               </p>
-              <span class="text-xl text-gray-600 flex flex-col font-bold">
+              <span className="text-xl text-gray-600 font-bold">
                 "Houston's Food Cultures: A Celebration"
               </span>
-              <p class="flex mt-2 text-xl text-gray-600">Opening in:</p>
-              <span class="flex text-2xl text-gray-700  font-bold">
+              <p className="mt-2 text-xl text-gray-600">Opening in:</p>
+              <span className="text-2xl text-gray-700 font-bold">
                 {countdown}
               </span>
             </div>
-            <div class="flex items-center w-full">
-              <button class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
+            <div className="flex items-center w-full lg:justify-end">
+              <button className="w-full lg:w-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
                 Book Here
               </button>
             </div>

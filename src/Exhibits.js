@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import exhibitionImage from "./assets/exhibition.jpg";
+// import exhibitionImage from "./assets/exhibition.jpg";
 
 const Exhibits = () => {
   const [countdown, setCountdown] = useState(null);

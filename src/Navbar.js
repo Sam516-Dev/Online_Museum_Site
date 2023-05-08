@@ -42,6 +42,57 @@ function Navbar() {
               </NavLink>
             </div>
           </div>
+          {/* Mobile Navigation */}
+          <div className="md:hidden">
+            <button
+              type="button"
+              className="block text-gray-600 hover:text-blue-500 focus:text-blue-500 focus:outline-none"
+            >
+              <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                <path
+                  className="hidden"
+                  fill-rule="evenodd"
+                  d="M2 6h20v2H2V6zm0 5h20v2H2v-2zm0 5h20v2H2v-2z"
+                />
+                <path
+                  className="block"
+                  fill-rule="evenodd"
+                  d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        {/* Mobile Navigation Menu */}
+        <div className="md:hidden">
+          <div className="pt-2 pb-3 space-y-1">
+            <NavLink
+              exact
+              to="/"
+              className="block pl-3 pr-4 py-2 border-l-4 text-base font-medium text-gray-600 bg-gray-50 border-gray-200"
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/collections"
+              className="block pl-3 pr-4 py-2 border-l-4 text-base font-medium text-gray-600 hover:bg-gray-50 hover:text-blue-500"
+            >
+              Collections
+            </NavLink>
+
+            <NavLink
+              to="/exhibits"
+              className="block pl-3 pr-4 py-2 border-l-4 text-base font-medium text-gray-600 hover:bg-gray-50 hover:text-blue-500"
+            >
+              Exhibits
+            </NavLink>
+            <NavLink
+              to="/aboutus"
+              className="block pl-3 pr-4 py-2 border-l-4 text-base font-medium text-gray-600 hover:bg-gray-50 hover:text-blue-500"
+            >
+              About Us
+            </NavLink>
+          </div>
         </div>
       </div>
     </nav>

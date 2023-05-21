@@ -1,3 +1,5 @@
+import { ProgressBar } from "react-loader-spinner";
+
 function AboutUs() {
   return (
     <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
@@ -36,6 +38,17 @@ function AboutUs() {
           you're looking to explore new culinary horizons, there's no better
           place to be than Houston, Texas.
         </p>
+      </div>
+      <div>
+        <ProgressBar
+          height="80"
+          width="full"
+          ariaLabel="progress-bar-loading"
+          wrapperStyle={{}}
+          wrapperClass="progress-bar-wrapper"
+          borderColor="gray"
+          barColor="blue"
+        />
       </div>
     </div>
   );

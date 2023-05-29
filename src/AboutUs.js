@@ -39,7 +39,7 @@ function AboutUs() {
           place to be than Houston, Texas.
         </p>
       </div>
-      <div>
+      {/* <div>
         <ProgressBar
           height="80"
           width="full"
@@ -49,7 +49,7 @@ function AboutUs() {
           borderColor="gray"
           barColor="blue"
         />
-      </div>
+      </div> */}
     </div>
   );
 }

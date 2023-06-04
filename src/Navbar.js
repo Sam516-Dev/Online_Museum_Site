@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import logo from "../src/assets/museum-logo.png";
 import { useState } from "react";
 
+//fucntion to check if the menu is opne or closed 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 

@@ -32,18 +32,20 @@ function Collections() {
         Houston Food Cultures Exhibition
       </h2>
 
-      <div className="grid grid-cols-1  md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1   md:grid-cols-3 gap-8">
         {collections.map((collection) => (
-          <div key={collection.id} className="bg-white rounded-lg shadow-md">
+          <div key={collection.id} className="bg-blue-300 rounded-lg shadow-md">
             <img
               src={collection.imageUrl}
               alt={collection.title}
               className="rounded-t-lg h-64 w-full object-cover"
             />
-            <div className="p-4">
-              <h3 className="text-lg font-bold mb-2">{collection.title}</h3>
-              <p className="text-gray-600">{collection.description}</p>
-              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
+            <div className="p-4  flex justify-between flex-col ">
+              <h3 className="flex text-lg font-bold mb-2">
+                {collection.title}
+              </h3>
+              <p className="flex text-gray-600">{collection.description}</p>
+              <button className="flex bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
                 View Collection
               </button>
             </div>
